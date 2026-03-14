@@ -1,0 +1,124 @@
+
+<html>
+<head>
+<title>Thirukkural </title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background: linear-gradient(to right,#18cb14,#ebedee);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-style: oblique;
+    
+}
+
+.container{
+    text-align:center;
+    background:rgb(196, 100, 100);
+    padding:50px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(172, 35, 35, 0.2);
+    width:400px;
+}
+
+#kuralBox{
+    margin:20px 0;
+    padding:30px;
+    background:#2189ac;
+    border-radius:10px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#1b6681;
+    color:white;    
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2e2f7d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>THRIUKURAL GENARATOR</h1>
+
+<h3 id="number">Kural No: --</h3>
+
+<div id="kuralBox">
+<p id="kural">Just click this button to learn more THIRUKURAL</p>
+<p id="meaning"></p>
+</div>
+
+<button onclick="generateKural()">Thirukkural</button>
+
+</div>
+
+<script>
+
+const kurals = [
+
+{
+number:1,
+kural:"அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு",
+meaning:"As the letter 'A' is the first of all letters, so the eternal God is first in the world."
+},
+
+{
+number:2,
+kural:"கற்றதனால் ஆய பயனென்கொல் வாலறிவன் நற்றாள் தொழாஅர் எனின்",
+meaning:"What use is learning if one does not worship the feet of God?"
+},
+
+{
+number:3,
+kural:"மலர்மிசை ஏகினான் மாணடி சேர்ந்தார் நிலமிசை நீடுவாழ் வார்",
+meaning:"Those who follow the feet of God will live long on earth."
+},
+
+{
+number:4,
+kural:"வேண்டுதல் வேண்டாமை இலானடி சேர்ந்தார்க்கு யாண்டும் இடும்பை இல",
+meaning:"Those who surrender to God will not suffer."
+},
+
+{
+number:5,
+kural:"இருள்சேர் இருவினையும் சேரா இறைவன் பொருள்சேர் புகழ்புரிந்தார் மாட்டு",
+meaning:"Those who praise God are free from good and bad deeds."
+}
+
+];
+
+function generateKural(){
+
+let randomIndex = Math.floor(Math.random()*kurals.length);
+
+let selected = kurals[randomIndex];
+
+document.getElementById("number").innerText = "Kural No: " + selected.number;
+
+document.getElementById("kural").innerText = selected.kural;
+
+document.getElementById("meaning").innerText = selected.meaning;
+
+}
+
+</script>
+
+</body>
+</html>
