@@ -49,11 +49,9 @@ To create a simple thirukkural generator using HTML, CSS, and JavaScript that di
 
 ## Code:
 ```
-
-
 <html>
 <head>
-<title>Thirukkural </title>
+<title>Thirukkural</title>
 
 <style>
 
@@ -65,7 +63,12 @@ body{
     justify-content:center;
     align-items:center;
     font-style: oblique;
-    
+}
+
+.wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .container{
@@ -99,24 +102,42 @@ button:hover{
     background:#2e2f7d;
 }
 
+footer{
+    margin-top:15px;
+    text-align:center;
+    color:white;
+    font-size:14px;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<div class="wrapper">
+
 <div class="container">
 
-<h1>THRIUKURAL GENARATOR</h1>
+<h1>THIRUKKURAL GENERATOR</h1>
 
 <h3 id="number">Kural No: --</h3>
 
 <div id="kuralBox">
-<p id="kural">Just click this button to learn more THIRUKURAL</p>
+<p id="kural">Just click this button to learn more THIRUKKURAL</p>
 <p id="meaning"></p>
 </div>
 
 <button onclick="generateKural()">Thirukkural</button>
+
+</div>
+<br>
+<br>
+
+
+<footer>
+<p>© 2026 | Ashwin Kumar .M | Reg No: 212225040033</p>
+</footer>
 
 </div>
 
@@ -126,7 +147,7 @@ const kurals = [
 
 {
 number:1,
-kural:"Agaram mudhala ezhuthellamAadhi Bhagavan mudhatre ulagu.",
+kural:"Agaram mudhala ezhuthellam Aadhi Bhagavan mudhatre ulagu.",
 meaning:"As the letter 'A' is the first of all letters, so the eternal God is first in the world."
 },
 
@@ -174,14 +195,9 @@ document.getElementById("meaning").innerText = selected.meaning;
 
 </body>
 </html>
-
-</script>
-
-</body>
-</html>
 ```
 
 ## Output:
-![alt text](image.png)
+![alt text](image-2.png)
 ## Result:
 A simple quote generator using HTML, CSS, and JavaScript that displays a new random motivational quote each time a button is clicked — similar to daily quote sections on blogs or productivity apps is created successfully.
